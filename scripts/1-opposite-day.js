@@ -3,28 +3,43 @@
 console.log('--- loading: opposite day');
 
 function oppositeDayHandler() {
-  'use strict';
-  debugger;
+	'use strict';
+	debugger;
 
-  // read inputs from user
-  const showTheNumber = _(`do you want to see a random number?`);
+	// read inputs from user
+	const showTheNumber = confirm(`do you want to see a random number?`);
+	const check_type = Number(showTheNumber);
 
-  // before moving on ... type check!
-  if (typeof showTheNumber !== 'boolean') { throw new TypeError(); }
+	// before moving on ... type check!
+	let message_1;
+	if (typeof check_type !== 'boolean') {
+		switch (check_type) {
+			case 1:
+				message_1 = Math.floor(Math.random() * 100);
+				break;
+			case 0:
+				message_1 = 'No random number:)';
+		}
+	} else {
+		try {
+			throw 'Welcome guest!';
+		} catch (err) {
+			return alert(err);
+		}
+	}
 
-  // perform core logic
-  //  if they said they want to see the numbe, don't show it
-  //  if they do want to see the number, do show it
-  const oppositeDay = _; // use a logical operator to reverse the value of their input
-  const message = _ ? (100 * Math.random()) : 'as you wish.  good day!';
+	// perform core logic
+	//  if they said they want to see the number, don't show it
+	//  if they do want to see the number, do show it
 
-  // alert result for the user
-  alert(_);
+	const message = message_1;
 
-  // log action for the developer
-  console.log('\n--- opposite day ---');
-  console.log('showTheNumber:', typeof showTheNumber, '\n', showTheNumber);
-  console.log('oppositeDay:', typeof oppositeDay, '\n', oppositeDay);
-  console.log('message:', typeof message, '\n', message);
+	// alert result for the user
+	alert(message);
 
+	// log action for the developer
+	console.log('\n--- opposite day ---');
+	console.log('showTheNumber:', typeof showTheNumber, '\n', showTheNumber);
+	console.log('convert input type:', typeof check_type, '\n', check_type);
+	console.log('message:', typeof message, '\n', message);
 }

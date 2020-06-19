@@ -1,0 +1,28 @@
+{
+  "name": "debugging-integrate-week-1",
+  "version": "1.0.0",
+  "description": "This set of exercises has 4 challenges in the `/scripts` folder.  Your first task is to fill in the blanks in `index.html`, then you'll be able to work your way through the .js files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/galalkoro/debugging-integrate-week-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/galalkoro/debugging-integrate-week-1/issues"
+  },
+  "homepage": "https://github.com/galalkoro/debugging-integrate-week-1#readme",
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "prettier": "^2.0.5"
+  }
+}
